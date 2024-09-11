@@ -10,7 +10,7 @@ Students are expected to:
 Student Info
 =======================
 
-* Name: *YourNameHere*
-* ID: *YourIdHere*
-* Group ID: *Your Group ID here*
-* Project Name: *Your Project Name here*
+* Name: Phạm Lê Vũ
+* ID: 22BI13480
+* Group ID: 13
+* Project Name: Facebook Client
