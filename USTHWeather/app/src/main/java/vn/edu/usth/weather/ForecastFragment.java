@@ -1,16 +1,19 @@
 package vn.edu.usth.weather;
 
-import android.os.Bundle;
 import android.graphics.Color;
+import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -50,6 +53,10 @@ public class ForecastFragment extends Fragment {
         return fragment;
     }
 
+    private static final String TAG = "Weather";
+    ImageButton sb;
+    ImageButton rb;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,10 +67,39 @@ public class ForecastFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //  LinearLayout view = new LinearLayout(getContext());
+        //        view.setBackgroundColor(Color.GREEN);
+        //        view.setOrientation(LinearLayout.VERTICAL);
+        //
+        //        TextView textView = new TextView(getContext());
+        //        textView.setText("Thursday");
+        //
+        //        ImageView imageView = new ImageView(getContext());
+        //        imageView.setImageResource(R.drawable.day_rain_thunder);
+        //
+        //        view.addView(imageView);
+
         View view = inflater.inflate(R.layout.fragment_forecast, container, false);
+
+        ImageButton sb = view.findViewById(R.id.Settingbutton1);
+        sb.setOnClickListener(new View.OnClickListener() {
+                                  @Override
+                                  public void onClick(View view) {
+                                      Log.i(TAG, "Setting!");
+                                  }
+                              }
+        );
+
+        ImageButton rb = view.findViewById(R.id.ReloadButton1);
+        rb.setOnClickListener(new View.OnClickListener() {
+                                  @Override
+                                  public void onClick(View view) {
+                                      Log.i(TAG, "Refresh!");
+                                  }
+                              }
+        );
 
         return view;
     }
