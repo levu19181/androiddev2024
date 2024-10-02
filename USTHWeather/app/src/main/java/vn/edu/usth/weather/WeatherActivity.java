@@ -77,7 +77,7 @@ public class WeatherActivity extends AppCompatActivity {
         // Check if MediaPlayer was successfully created
         if (mediaPlayer != null) {
             /* Start playing the audio */
-            mediaPlayer.start();
+            mediaPlayer.start() ;
 
         }
     }
@@ -86,7 +86,6 @@ public class WeatherActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
-
 
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
