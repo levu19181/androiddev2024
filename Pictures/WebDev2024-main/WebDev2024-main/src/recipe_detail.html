@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/recipe_detail_styles.css" />
+    <script src="javascript/back_btn.js"></script>
+    <script src="javascript/recipe_detail.js"></script>
+    <!-- font Awsome cdn style sheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Recipe Overview</title>
+  </head>
+  <body>
+    <div class="top-buttons">
+      <button onclick="window.location.href='index.html'">
+          <i class="fas fa-home"></i> <!-- House icon -->
+      </button>
+      <button onclick="goBack()">
+          <i class="fas fa-arrow-left"></i> <!-- Back arrow icon -->
+      </button>
+    </div>
+    <div class="recipe-details">
+      <section class="recipe-summary">
+        <div class="recipe-summary-text-wrapper">
+          <h1 class="recipe-title" id="recipe-title">Delicious Lasagna</h1>
+          <p class="attribution">A Food Creator</p>
+          <div class="rating-stars">
+            <a
+              class="recipe-details-rating"
+              href=""
+              title="See Reviews"
+              aria-label="See Reviews"
+            >
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="count micro-text">(1)</span>
+            </a>
+          </div>
+          <div class="recipe-info-summary-wrapper">
+            <div class="ingredient-summary-count">
+              <ul>
+                <li class="value">11</li>
+                <li>Ingredients</li>
+              </ul>
+            </div>
+            <div class="time-to-make">
+              <ul>
+                <li class="value">40</li>
+                <li>Minutes</li>
+              </ul>
+            </div>
+            <div class="energy">
+              <ul>
+                <li class="value">500</li>
+                <li>Calories</li>
+              </ul>
+            </div>
+          </div>
+          <div class="interactions-wrapper">
+            <button onclick="readDirectionLink();" id="read-direction">
+              Read Instructions
+            </button>
+            <button>Save Recipe</button>
+          </div>
+        </div>
+        <img  alt="Lasagna Image" id="summary-image-view" />
+      </section>
+    </div>
+
+    <div class="ingredients-section-title">
+      <h2>Ingredients</h2>
+    </div>
+
+    <section class="ingredients-list">
+      <ul>
+        <li>2 Tbsp. <b>olive oil</b></li>
+        <li>454 grams <b>ground beef</b></li>
+        <li>1 <b>yellow onion</b></li>
+        <li>3 <b>cloves garlic</b></li>
+        <li>790 grams <b>tomato puree</b></li>
+        <li>391 grams <b>tomato sauce</b></li>
+        <li>411 grams <b>diced tomatoes</b></li>
+        <li>170 grams <b>tomato paste</b></li>
+        <li>1 Tbsp. <b>sugar</b></li>
+        <li>2 tsp. <b>basil</b></li>
+        <li>1 1/2 tsp. <b>salt</b></li>
+        <li>1 tsp. <b>oregano</b></li>
+        <li>1/4 tsp. <b>blackpepper</b></li>
+        <li>2 <b>bay leaves</b></li>
+        <li>1 <b>box lasagna noodles</b></li>
+        <li>1 <b>large egg</b></li>
+        <li>850 grams <b>ricotta cheese</b></li>
+        <li>100 grams <b>grated Parmesan chees (divided)</b></li>
+        <li>1 Tbsp. <b>dried parsley</b></li>
+        <li>560 grams <b>shredded mozzarella</b></li>
+      </ul>
+    </section>
+    <div class="nutrition">
+      <div class="circle">
+        <p class="value">740</p>
+        <p>CALORIES</p>
+      </div>
+      <div class="circle">
+        <p class="value">83%</p>
+        <p>SODIUM</p>
+        <p>1990mg</p>
+      </div>
+      <div class="circle">
+        <p class="value">72%</p>
+        <p>FAT</p>
+        <p>47g</p>
+      </div>
+      <div class="circle">
+        <p class="value">10%</p>
+        <p>CARBS</p>
+        <p>31g</p>
+      </div>
+      <div class="circle">
+        <p class="value">20%</p>
+        <p>FIBER</p>
+        <p>5g</p>
+      </div>
+      <div class="circle">
+        <p class="value">38%</p>
+        <p>POTASSIUM</p>
+        <p>1330mg</p>
+      </div>
+    </div>
+
+    <section class="recipe-tags">
+      <h2>Recipe Tags</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="recipe-tag-link" href="Main_dishes.html"
+              >Main Dishes</a
+            >
+          </li>
+          <li>Italian</li>
+          <li>Lasagna</li>
+          <li>Sauteeing</li>
+          <li>Browning</li>
+        </ul>
+      </nav>
+    </section>
+
+    <div class="recipe-cooking-steps-section-title-wrapper">
+      <h2>Cooking steps</h2>
+    </div>
+
+    <section class="recipe-cooking-steps-list-wrapper">
+      <ul>
+        <li>
+          <b>For the meat sauce</b> heat a bit of olive oil in a large pot or
+          Dutch oven over medium heat. Add the onion and garlic, and sauté until
+          fragrant. Add the ground beef and cook until brown. Add the diced
+          tomatoes, puree, sauce, paste, sugar, Worcestershire sauce, basil,
+          salt, pepper, oregano and bay leaves. Stir until well combined. Cover,
+          and reduce heat to simmer for at least 45 minutes, stirring
+          frequently.
+        </li>
+        <li>
+          Preheat oven to 350°F, and cook lasagna noodles al dente according to
+          package directions.
+        </li>
+        <li>
+          <b>For the Ricotta Mixture</b> Preheat oven to 350°F, and cook lasagna
+          noodles al dente according to package directions.
+        </li>
+        <li>
+          <b>To assemble the Lasagna</b> Line a baking sheet with tin foil, and
+          place a deep 9 X 13-inch or large casserole dish on it, generously
+          coating it with cooking spray. Place a cup of meat sauce on the bottom
+          of the pan. For the first layer, place 4 lasagna noodles in a single
+          layer over the sauce. Spread 1/3 of the ricotta cheese mixture over
+          the noodles. Cover with 2 cups of the meat mixture. Sprinkle 1/2 cup
+          mozzarella evenly over the sauce. Repeat with 4 noodles, ricotta
+          filling, sauce, mozzarella cheese. Again repeat with 4 noodles,
+          remaining ricotta filling, sauce, mozzarella cheese. Layer 4 cooked
+          noodles on top, cover with remaining sauce, and sprinkle remaining
+          mozzarella and Parmesan cheese on top of the lasagna.
+        </li>
+        <li>Bake for 45-50 minutes until bubbly.</li>
+      </ul>
+    </section>
+  </body>
+</html>

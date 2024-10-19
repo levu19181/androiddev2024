@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 10px;
+
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 8px;           
+        }
+        h1 {
+            font-size: 50px;
+            color: #333;
+        }
+        .tabs {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 10px;
+        }
+        .tabs label {
+            padding: 10px;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-size:20px;
+            color:black;
+        }
+        .tabs label:hover {
+            color: #999;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        input:checked + label {
+            border-bottom: 2px solid teal;
+        }
+        .add-recipe {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .add-recipe:hover {
+            background-color: #005b4f;
+        }
+        .no-recipes {
+            text-align: center;
+            color: #888;
+        }
+        .calendar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: auto;
+            background-color: #f5f5f5;
+            border-radius: 30px;
+            padding: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .prev-date, .next-date {
+            background: none;
+            border: none;
+            font-size: 18px;
+            color: #888;
+            cursor: pointer;
+            padding: 0 10px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }        
+        .prev-date:hover, .next-date:hover {
+            background-color: #e0e0e0;
+        }
+        .date {
+            font-size: 20px;
+            color: #333;
+        }
+        .day-section {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+            padding: 15px 0;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            color: #00796b;
+            padding-left: 10px;
+        }
+
+        .day-text {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #00796b;
+            padding-left: 10px;
+        }
+
+        .day-text:hover {
+            color:#888
+        }
+
+        .content {
+            display: none;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        /* Style for active/open section */
+        .day-section.active .content {
+            display: block;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            background-color: #4CAF50; 
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: left;
+        }
+        .circle-position{
+            padding-top: 20px;
+        }
+       .plus {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Meal Planner</h1>
+        <div class="tabs">
+            <input type="radio" id="today" name="tab" checked>
+            <label for="today"><b>Today</b><br>0 recipes</label>
+
+            <input type="radio" id="thisweek" name="tab">
+            <label for="thisweek"><b> This Week</b><br>0 recipes</label>
+
+            <input type="radio" id="unscheduled" name="tab">
+            <label for="unscheduled"><b> Unscheduled</b><br>0 recipes</label>
+        </div>
+
+        <div class="calendar-nav">
+            <button class="prev-date" onclick="changeDate(-1)">&lt;</button>
+            <span class="date" id="dateDisplay">Monday, Oct 7</span>
+            <button class="next-date" onclick="changeDate(1)">&gt;</button>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Monday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Tuesday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Wednesday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Thursday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Friday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Saturday</span>
+            </div>
+        </div>
+
+        <div class="day-section">
+            <div class="day-header">
+                <div class="circle">
+                    <span class="plus">+</span>
+                </div>
+                <span class="day-text">Sunday</span>
+            </div>
+        </div>

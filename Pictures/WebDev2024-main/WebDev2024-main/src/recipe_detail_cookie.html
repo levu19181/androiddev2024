@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="assets/styles/recipe_detail_styles.css" />
+    <script src="javascript/back_btn.js"></script>
+    <script src="javascript/recipe_detail.js"></script>
+    <!-- font Awsome cdn style sheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Recipe Overview</title>
+  </head>
+  <body>
+    <div class="top-buttons">
+      <button onclick="window.location.href='index.html'">
+          <i class="fas fa-home"></i> <!-- House icon -->
+      </button>
+      <button onclick="goBack()">
+          <i class="fas fa-arrow-left"></i> <!-- Back arrow icon -->
+      </button>
+    </div>
+    <div class="recipe-details">
+      <section class="recipe-summary">
+        <div class="recipe-summary-text-wrapper">
+          <h1 class="recipe-title" id="recipe-title">Healthy Oatmeal Cookie</h1>
+          <p class="attribution">A Food Creator</p>
+          <div class="rating-stars">
+            <a
+              class="recipe-details-rating"
+              href=""
+              title="See Reviews"
+              aria-label="See Reviews"
+            >
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="fa full-star fa-star" aria-hidden="true"></span>
+              <span class="count micro-text">(1)</span>
+            </a>
+          </div>
+          <div class="recipe-info-summary-wrapper">
+            <div class="ingredient-summary-count">
+              <ul>
+                <li class="value">11</li>
+                <li>Ingredients</li>
+              </ul>
+            </div>
+            <div class="time-to-make">
+              <ul>
+                <li class="value">45</li>
+                <li>Minutes</li>
+              </ul>
+            </div>
+            <div class="energy">
+              <ul>
+                <li class="value">170</li>
+                <li>Calories</li>
+              </ul>
+            </div>
+          </div>
+          <div class="interactions-wrapper">
+            <button onclick="readDirectionLink();" id="read-direction">
+              Read Instructions
+            </button>
+            <button>Save Recipe</button>
+          </div>
+        </div>
+        <img alt="Lasagne Image" id="summary-image-view" />
+      </section>
+    </div>
+
+    <div class="ingredients-section-title">
+      <h2>Ingredients</h2>
+    </div>
+
+    <section class="ingredients-list">
+      <ul>
+        <li>114 grams <b>butter</b></li>
+        <li>97 grams <b>brown sugar</b></li>
+        <li>1 <b>egg</b></li>
+        <li>1/2 tsp <b>vanilla extract</b></li>
+        <li>94 grams <b>flour</b></li>
+        <li>1/2 tsp <b>baking soda</b></li>
+        <li>1/2 tsp <b>ground cinnamn</b></li>
+        <li>1/4 tsp <b>salt</b></li>
+        <li>122 grams <b>rolled oats</b></li>
+        <li>84 grams <b>raisins</b></li>
+        <li>73 grams <b>chopped buts</b></li>
+      </ul>
+    </section>
+    <div class="nutrition">
+      <div class="circle">
+        <p class="value">170</p>
+        <p>CALORIES</p>
+      </div>
+      <div class="circle">
+        <p class="value">5%</p>
+        <p>SODIUM</p>
+        <p>125mg</p>
+      </div>
+      <div class="circle">
+        <p class="value">14%</p>
+        <p>FAT</p>
+        <p>9g</p>
+      </div>
+      <div class="circle">
+        <p class="value">7%</p>
+        <p>CARBS</p>
+        <p>21g</p>
+      </div>
+      <div class="circle">
+        <p class="value">8%</p>
+        <p>FIBER</p>
+        <p>2g</p>
+      </div>
+      <div class="circle">
+        <p class="value">3%</p>
+        <p>POTASSIUM</p>
+        <p>120mg</p>
+      </div>
+    </div>
+
+    <section class="recipe-tags">
+      <h2>Recipe Tags</h2>
+      <nav>
+        <ul>
+          <li>
+            <a class="recipe-tag-link" href="Cookies.html"
+              >Desserts</a
+            >
+          </li>
+          <li>Cookies</li>
+          <li>Browning</li>
+          <li>Baking</li>
+        </ul>
+      </nav>
+    </section>
+    <div class="recipe-cooking-steps-section-title-wrapper">
+      <h2>Cooking steps</h2>
+    </div>
+
+    <section class="recipe-cooking-steps-list-wrapper">
+      <ul>
+        <li>
+          <b>Preheat your oven to 350°F (175°C).</b>Creaming the Butter and Sugars: In a large mixing bowl, cream together the softened butter, granulated sugar, and brown sugar until the mixture is light and fluffy.
+        </li>
+        <li>
+          Adding Eggs and Vanilla: Beat in the eggs, one at a time, and then add the vanilla extract. Mix well until the ingredients are fully combined.
+        </li>
+        <li>
+          <b>Mixing Dry Ingredients:</b> In a separate bowl, whisk together the all-purpose flour, baking soda, baking powder, and salt. Gradually add this dry mixture to the wet ingredients, ensuring thorough mixing.
+        </li>
+        <li>
+          <b>Incorporating Mix-Ins:</b>Add your favorite mix-ins, such as chocolate chips, nuts, or dried fruit, and fold them into the cookie dough. 
+        </li>
+        <li>Scooping and Baking: Using a cookie scoop or a spoon, drop rounded portions of dough onto a parchment-lined baking sheet. Make sure to leave enough space between each cookie. Bake in the preheated oven for 10-12 minutes or until the edges are golden brown.</li>
+      </ul>
+    </section>
+  </body>
+</html>
